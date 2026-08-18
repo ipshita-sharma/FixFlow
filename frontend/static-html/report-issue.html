@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Report an issue — FixFlow</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/forms.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">↗</span>FixFlow
+      </a>
+
+      <nav aria-label="Workspace">
+        <span class="sidebar-label">Workspace</span>
+        <a href="dashboard.html">
+          <span class="nav-icon">▦</span>Dashboard
+        </a>
+        <a href="my-issues.html">
+          <span class="nav-icon">◌</span>My Issues
+        </a>
+        <a class="active" href="report-issue.html">
+          <span class="nav-icon">＋</span>Report Issue
+        </a>
+        <a href="assets.html">
+          <span class="nav-icon">◈</span>Assets
+        </a>
+        <a href="profile.html">
+          <span class="nav-icon">⌁</span>Notifications
+        </a>
+
+        <span class="sidebar-label">Account</span>
+        <a href="profile.html">
+          <span class="nav-icon">◎</span>Profile
+        </a>
+        <a href="index.html">
+          <span class="nav-icon">↪</span>Logout
+        </a>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <div class="sidebar-user">
+          <span class="avatar">AJ</span>
+          <div>
+            <strong>Alex Johnson</strong>
+            <span>Member · Vertex</span>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <div class="main-area">
+      <header class="topbar">
+        <button class="icon-btn" data-menu-toggle aria-label="Open navigation">☰</button>
+        <span class="topbar-title">Report issue</span>
+
+        <label class="topbar-search">
+          ⌕
+          <input type="search" placeholder="Search issues, assets...">
+        </label>
+
+        <div class="topbar-actions">
+          <button class="icon-btn" aria-label="Notifications">
+            ♢
+            <i class="notification-dot"></i>
+          </button>
+
+          <div class="top-user">
+            <span class="avatar">AJ</span>
+            <div>
+              <strong>Alex Johnson</strong>
+              <span>Operations member</span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="page">
+        <div class="page-header">
+          <div>
+            <span class="eyebrow">Help us route it right</span>
+            <h1>Report a maintenance issue.</h1>
+            <p>
+              Share a few details and FixFlow will calculate priority, SLA,
+              and the next best action.
+            </p>
+          </div>
+
+          <a class="btn btn-ghost" href="my-issues.html">View my issues</a>
+        </div>
+
+        <div class="dashboard-grid wide-right">
+          <form
+            class="form-card"
+            action="issue-details.html"
+            method="get"
+            data-issue-form
+          >
+            <section class="form-section">
+              <h2>What happened?</h2>
+
+              <div class="field">
+                <label for="issue-title">Issue title</label>
+                <input
+                  id="issue-title"
+                  name="title"
+                  type="text"
+                  placeholder="e.g. AC not cooling in Conference Room 302"
+                  required
+                >
+              </div>
+
+              <div class="form-row">
+                <div class="field">
+                  <label for="category">Category</label>
+                  <select id="category" name="category" required>
+                    <option value="">Choose category</option>
+                    <option>Electrical</option>
+                    <option>Plumbing</option>
+                    <option>HVAC</option>
+                    <option>IT / Network</option>
+                    <option>Furniture</option>
+                    <option>Security</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+
+                <div class="field">
+                  <label for="severity">Severity</label>
+                  <select id="severity" name="severity" data-severity required>
+                    <option value="">Choose severity</option>
+                    <option value="1">Low</option>
+                    <option value="2">Medium</option>
+                    <option value="3">High</option>
+                    <option value="4">Critical</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="description">Description</label>
+                <textarea
+                  id="description"
+                  name="description"
+                  placeholder="What did you notice? Who or what is affected?"
+                  required
+                ></textarea>
+              </div>
+            </section>
+
+            <section class="form-section">
+              <h2>Where is it?</h2>
+
+              <div class="form-row">
+                <div class="field">
+                  <label for="building">Building</label>
+                  <select id="building" name="building" required>
+                    <option value="">Choose building</option>
+                    <option>Block A</option>
+                    <option>Block B</option>
+                    <option>Annex</option>
+                  </select>
+                </div>
+
+                <div class="field">
+                  <label for="floor">Floor</label>
+                  <select id="floor" name="floor" required>
+                    <option value="">Choose floor</option>
+                    <option>Ground</option>
+                    <option>Floor 1</option>
+                    <option>Floor 2</option>
+                    <option>Floor 3</option>
+                    <option>Floor 4</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="field">
+                  <label for="room">Room / area</label>
+                  <input
+                    id="room"
+                    name="room"
+                    type="text"
+                    placeholder="Conference Room 302"
+                    required
+                  >
+                </div>
+
+                <div class="field">
+                  <label for="asset">Related asset</label>
+                  <select id="asset" name="asset">
+                    <option value="">Select if known</option>
+                    <option>HVAC-302 · Conference Room HVAC</option>
+                    <option>SRV-02 · Application server</option>
+                    <option>UPS-04 · Power backup</option>
+                    <option>PRN-14 · Finance printer</option>
+                  </select>
+                </div>
+              </div>
+            </section>
+
+            <section class="form-section">
+              <h2>How can we reach you?</h2>
+
+              <div class="form-row">
+                <div class="field">
+                  <label for="contact">Preferred contact</label>
+                  <select id="contact" name="contact">
+                    <option>Email · alex@vertexbusiness.com</option>
+                    <option>Phone · +91 98765 43210</option>
+                    <option>In-app notification</option>
+                  </select>
+                </div>
+
+                <div class="field">
+                  <label for="image">Add an image (optional)</label>
+                  <input
+                    id="image"
+                    name="image"
+                    type="file"
+                    accept="image/*"
+                  >
+                </div>
+              </div>
+
+              <div class="upload-zone" data-upload-zone>
+                <div>
+                  <strong>Drop a photo here, or choose a file above</strong>
+                  <span>
+                    PNG, JPG up to 10 MB · A visual can help us diagnose faster.
+                  </span>
+                </div>
+              </div>
+            </section>
+
+            <div class="form-footer">
+              <a class="btn btn-ghost" href="dashboard.html">Cancel</a>
+              <button class="btn btn-primary" type="submit">
+                Submit issue <span aria-hidden="true">↗</span>
+              </button>
+            </div>
+          </form>
+
+          <aside class="side-stack">
+            <section class="panel">
+              <div class="panel-header">
+                <h2>What happens next?</h2>
+              </div>
+
+              <div class="timeline">
+                <div class="timeline-item">
+                  <strong>Issue reviewed</strong>
+                  <p>We check the context and location.</p>
+                </div>
+
+                <div class="timeline-item">
+                  <strong>Priority determined</strong>
+                  <p>The transparent score sets urgency.</p>
+                </div>
+
+                <div class="timeline-item">
+                  <strong>Technician assigned</strong>
+                  <p>Skills, workload, and location are matched.</p>
+                </div>
+
+                <div class="timeline-item pending">
+                  <strong>Repair tracked</strong>
+                  <p>You can follow every update.</p>
+                </div>
+              </div>
+            </section>
+
+            <section class="sla-card">
+              <span>Priority preview</span>
+              <strong data-priority-preview>Waiting for severity</strong>
+              <p class="small" data-light-text="true">
+                Choose a severity to see how the issue may be routed.
+              </p>
+
+              <div class="progress-line">
+                <i data-priority-bar data-width="18"></i>
+              </div>
+            </section>
+          </aside>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script defer src="js/app.js"></script>
+</body>
+</html>

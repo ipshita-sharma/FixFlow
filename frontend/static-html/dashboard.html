@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dashboard — FixFlow</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+  </head>
+
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" id="sidebar">
+        <a class="brand" href="index.html">
+          <span class="brand-mark">↗</span>FixFlow
+        </a>
+
+        <nav aria-label="Workspace">
+          <span class="sidebar-label">Workspace</span>
+
+          <a class="active" href="dashboard.html">
+            <span class="nav-icon">▦</span>Dashboard
+          </a>
+
+          <a href="my-issues.html">
+            <span class="nav-icon">◌</span>My Issues
+          </a>
+
+          <a href="report-issue.html">
+            <span class="nav-icon">＋</span>Report Issue
+          </a>
+
+          <a href="assets.html">
+            <span class="nav-icon">◈</span>Assets
+          </a>
+
+          <a href="profile.html">
+            <span class="nav-icon">⌁</span>Notifications
+          </a>
+
+          <span class="sidebar-label">Account</span>
+
+          <a href="profile.html">
+            <span class="nav-icon">◎</span>Profile
+          </a>
+
+          <a href="index.html">
+            <span class="nav-icon">↪</span>Logout
+          </a>
+        </nav>
+
+        <div class="sidebar-bottom">
+          <div class="sidebar-user">
+            <span class="avatar">AJ</span>
+            <div>
+              <strong>Alex Johnson</strong>
+              <span>Member · Vertex</span>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <div class="main-area">
+        <header class="topbar">
+          <button class="icon-btn" data-menu-toggle aria-label="Open navigation">☰</button>
+          <span class="topbar-title">Dashboard</span>
+
+          <label class="topbar-search">
+            ⌕
+            <input type="search" placeholder="Search issues, assets...">
+          </label>
+
+          <div class="topbar-actions">
+            <button class="icon-btn" aria-label="Notifications">
+              ♢
+              <i class="notification-dot"></i>
+            </button>
+
+            <div class="top-user">
+              <span class="avatar">AJ</span>
+              <div>
+                <strong>Alex Johnson</strong>
+                <span>Operations member</span>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <main class="page">
+          <div class="page-header">
+            <div>
+              <span class="eyebrow">Monday, 17 August 2026</span>
+              <h1>Good morning, Alex.</h1>
+              <p>Here’s a focused view of the maintenance work connected to your spaces.</p>
+            </div>
+
+            <a class="btn btn-primary" href="report-issue.html">＋ Report an issue</a>
+          </div>
+
+          <section class="kpi-grid" aria-label="Issue summary">
+            <article class="kpi-card">
+              <span class="kpi-label">Open issues</span>
+              <div class="kpi-number">08</div>
+              <span class="trend">↓ 12% this week</span>
+            </article>
+
+            <article class="kpi-card">
+              <span class="kpi-label">In progress</span>
+              <div class="kpi-number">05</div>
+              <span class="trend">2 due today</span>
+            </article>
+
+            <article class="kpi-card">
+              <span class="kpi-label">Urgent attention</span>
+              <div class="kpi-number">02</div>
+              <span class="trend down">↑ 1 since yesterday</span>
+            </article>
+
+            <article class="kpi-card">
+              <span class="kpi-label">Resolved this month</span>
+              <div class="kpi-number">24</div>
+              <span class="trend">↑ 18% vs July</span>
+            </article>
+          </section>
+
+          <div class="dashboard-grid">
+            <section class="panel">
+              <div class="panel-header">
+                <h2>Recent issues</h2>
+                <a href="my-issues.html">View all issues ↗</a>
+              </div>
+
+              <div class="table-card" data-compact="true">
+                <table class="issue-table">
+                  <thead>
+                    <tr>
+                      <th>Issue</th>
+                      <th>Priority</th>
+                      <th>Status</th>
+                      <th>Technician</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <tr>
+                      <td>
+                        <a href="issue-details.html">
+                          <span class="issue-title">AC not cooling</span>
+                          <span class="issue-sub">FF-1042 · Conference Room 302</span>
+                        </a>
+                      </td>
+
+                      <td>
+                        <span class="priority priority-high">High</span>
+                      </td>
+
+                      <td>
+                        <span class="status status-progress">In progress</span>
+                      </td>
+
+                      <td>
+                        <span class="avatar orange">AM</span>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <span class="issue-title">Printer offline</span>
+                        <span class="issue-sub">FF-1051 · Finance Bay</span>
+                      </td>
+
+                      <td>
+                        <span class="priority priority-medium">Medium</span>
+                      </td>
+
+                      <td>
+                        <span class="status status-open">Assigned</span>
+                      </td>
+
+                      <td>
+                        <span class="avatar purple">RV</span>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <span class="issue-title">Water pressure low</span>
+                        <span class="issue-sub">FF-1057 · Pantry, Floor 2</span>
+                      </td>
+
+                      <td>
+                        <span class="priority priority-low">Low</span>
+                      </td>
+
+                      <td>
+                        <span class="status status-open">Open</span>
+                      </td>
+
+                      <td>
+                        <span class="muted small">Unassigned</span>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <span class="issue-title">Access card reader</span>
+                        <span class="issue-sub">FF-1061 · North Entrance</span>
+                      </td>
+
+                      <td>
+                        <span class="priority priority-critical">Critical</span>
+                      </td>
+
+                      <td>
+                        <span class="status status-risk">At risk</span>
+                      </td>
+
+                      <td>
+                        <span class="avatar dark">PS</span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+
+            <section class="panel">
+              <div class="panel-header">
+                <h2>Activity timeline</h2>
+                <a href="issue-details.html">Details ↗</a>
+              </div>
+
+              <div class="timeline">
+                <div class="timeline-item">
+                  <strong>Arjun accepted FF-1042</strong>
+                  <p>AC repair is now in progress.</p>
+                  <time>18 min ago</time>
+                </div>
+
+                <div class="timeline-item">
+                  <strong>Issue FF-1051 assigned</strong>
+                  <p>Rahul Verma was recommended for IT / Network.</p>
+                  <time>2 hours ago</time>
+                </div>
+
+                <div class="timeline-item">
+                  <strong>FF-1037 was resolved</strong>
+                  <p>Lighting repair verified by Priya.</p>
+                  <time>Yesterday</time>
+                </div>
+
+                <div class="timeline-item pending">
+                  <strong>Preventive maintenance due</strong>
+                  <p>UPS-04 is due in 5 days.</p>
+                  <time>Tomorrow</time>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <div class="dashboard-grid wide-right">
+            <section class="panel">
+              <div class="panel-header">
+                <h2>Issue volume</h2>
+                <a href="admin-dashboard.html">Analytics ↗</a>
+              </div>
+
+              <div class="analytics-row">
+                <div class="analytics-bar">
+                  <i data-height="46"></i>
+                  <span>Mon</span>
+                </div>
+
+                <div class="analytics-bar">
+                  <i data-height="62"></i>
+                  <span>Tue</span>
+                </div>
+
+                <div class="analytics-bar">
+                  <i data-height="78"></i>
+                  <span>Wed</span>
+                </div>
+
+                <div class="analytics-bar">
+                  <i data-height="53"></i>
+                  <span>Thu</span>
+                </div>
+
+                <div class="analytics-bar">
+                  <i data-height="90"></i>
+                  <span>Fri</span>
+                </div>
+
+                <div class="analytics-bar">
+                  <i data-height="42"></i>
+                  <span>Sat</span>
+                </div>
+
+                <div class="analytics-bar">
+                  <i data-height="28"></i>
+                  <span>Sun</span>
+                </div>
+              </div>
+            </section>
+
+            <section class="panel">
+              <div class="panel-header">
+                <h2>Notifications</h2>
+                <a href="profile.html">Manage ↗</a>
+              </div>
+
+              <div class="activity-list">
+                <div class="activity">
+                  <span class="avatar orange">!</span>
+                  <p>
+                    <strong>SLA watch</strong>
+                    <br>
+                    FF-1061 has 1h 18m remaining.
+                    <time>8 minutes ago</time>
+                  </p>
+                </div>
+
+                <div class="activity">
+                  <span class="avatar">✓</span>
+                  <p>
+                    <strong>Issue resolved</strong>
+                    <br>
+                    FF-1037 was marked verified.
+                    <time>Yesterday</time>
+                  </p>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <div class="quick-report">
+            <div>
+              <h3>Something needs attention?</h3>
+              <p>Give the operations team the context they need to move quickly.</p>
+            </div>
+
+            <a class="btn" href="report-issue.html">Report an issue ↗</a>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <script defer src="js/app.js"></script>
+  </body>
+</html>

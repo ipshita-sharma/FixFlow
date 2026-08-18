@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Assets — FixFlow</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/tables.css">
+</head>
+
+<body>
+    <div class="app-shell">
+        <aside class="sidebar" id="sidebar">
+            <a class="brand" href="index.html">
+                <span class="brand-mark">↗</span>FixFlow
+            </a>
+
+            <nav aria-label="Workspace">
+                <span class="sidebar-label">Workspace</span>
+
+                <a href="dashboard.html">
+                    <span class="nav-icon">▦</span>Dashboard
+                </a>
+
+                <a href="my-issues.html">
+                    <span class="nav-icon">◌</span>My Issues
+                </a>
+
+                <a href="report-issue.html">
+                    <span class="nav-icon">＋</span>Report Issue
+                </a>
+
+                <a class="active" href="assets.html">
+                    <span class="nav-icon">◈</span>Assets
+                </a>
+
+                <a href="profile.html">
+                    <span class="nav-icon">⌁</span>Notifications
+                </a>
+
+                <span class="sidebar-label">Account</span>
+
+                <a href="profile.html">
+                    <span class="nav-icon">◎</span>Profile
+                </a>
+
+                <a href="index.html">
+                    <span class="nav-icon">↪</span>Logout
+                </a>
+            </nav>
+
+            <div class="sidebar-bottom">
+                <div class="sidebar-user">
+                    <span class="avatar">AJ</span>
+                    <div>
+                        <strong>Alex Johnson</strong>
+                        <span>Member · Vertex</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <div class="main-area">
+            <header class="topbar">
+                <button class="icon-btn" data-menu-toggle aria-label="Open navigation">☰</button>
+                <span class="topbar-title">Assets</span>
+
+                <label class="topbar-search">
+                    ⌕
+                    <input type="search" placeholder="Search assets...">
+                </label>
+
+                <div class="topbar-actions">
+                    <button class="icon-btn" aria-label="Notifications">
+                        ♢
+                        <i class="notification-dot"></i>
+                    </button>
+
+                    <div class="top-user">
+                        <span class="avatar">AJ</span>
+                        <div>
+                            <strong>Alex Johnson</strong>
+                            <span>Operations member</span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <main class="page">
+                <div class="page-header">
+                    <div>
+                        <span class="eyebrow">Know what keeps the place running</span>
+                        <h1>Asset management</h1>
+                        <p>See the health, history, and maintenance context behind the spaces you use every day.</p>
+                    </div>
+
+                    <a class="btn btn-primary" href="admin-dashboard.html">
+                        Open command center ↗
+                    </a>
+                </div>
+
+                <section class="kpi-grid">
+                    <article class="kpi-card">
+                        <span class="kpi-label">Total assets</span>
+                        <div class="kpi-number">86</div>
+                        <span class="trend">Across 4 buildings</span>
+                    </article>
+
+                    <article class="kpi-card">
+                        <span class="kpi-label">Needs attention</span>
+                        <div class="kpi-number">09</div>
+                        <span class="trend down">3 recurring failures</span>
+                    </article>
+
+                    <article class="kpi-card">
+                        <span class="kpi-label">Under maintenance</span>
+                        <div class="kpi-number">04</div>
+                        <span class="trend">2 due this week</span>
+                    </article>
+
+                    <article class="kpi-card">
+                        <span class="kpi-label">Average health</span>
+                        <div class="kpi-number">84%</div>
+                        <span class="trend">↑ 2% this month</span>
+                    </article>
+                </section>
+
+                <div class="filter-bar">
+                    <input type="search" placeholder="Search asset ID or name" data-table-search>
+
+                    <select data-table-filter="category">
+                        <option value="">All categories</option>
+                        <option>HVAC</option>
+                        <option>Server</option>
+                        <option>Power</option>
+                        <option>Printing</option>
+                    </select>
+
+                    <select>
+                        <option>All conditions</option>
+                        <option>Healthy</option>
+                        <option>Needs attention</option>
+                        <option>Under maintenance</option>
+                    </select>
+                </div>
+
+                <div class="table-card">
+                    <table class="issue-table" data-filter-table>
+                        <thead>
+                            <tr>
+                                <th>Asset ID</th>
+                                <th>Asset</th>
+                                <th>Category</th>
+                                <th>Location</th>
+                                <th>Condition</th>
+                                <th>Health</th>
+                                <th>Last maintenance</th>
+                                <th>Warranty</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <strong>HVAC-302</strong>
+                                </td>
+
+                                <td>
+                                    <span class="issue-title">Conference Room HVAC</span>
+                                    <span class="issue-sub">12 incidents · Avg 4.8h</span>
+                                </td>
+
+                                <td data-category="HVAC">HVAC</td>
+                                <td>Block A · Floor 3</td>
+
+                                <td>
+                                    <span class="condition status-risk">Needs attention</span>
+                                </td>
+
+                                <td>
+                                    <div class="asset-health">
+                                        <div class="health-ring">68%</div>
+                                    </div>
+                                </td>
+
+                                <td>21 July 2026</td>
+
+                                <td>
+                                    <span class="status status-risk">Expired</span>
+                                </td>
+
+                                <td>
+                                    <a class="btn btn-ghost" href="issue-details.html">History</a>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <strong>SRV-02</strong>
+                                </td>
+
+                                <td>
+                                    <span class="issue-title">Application server</span>
+                                    <span class="issue-sub">2 incidents · Avg 1.2h</span>
+                                </td>
+
+                                <td data-category="Server">Server</td>
+                                <td>Block B · Basement</td>
+
+                                <td>
+                                    <span class="condition status-resolved">Healthy</span>
+                                </td>
+
+                                <td>
+                                    <div class="asset-health">
+                                        <div class="health-ring">94%</div>
+                                    </div>
+                                </td>
+
+                                <td>02 Aug 2026</td>
+
+                                <td>
+                                    <span class="status status-resolved">Active</span>
+                                </td>
+
+                                <td>
+                                    <a class="btn btn-ghost" href="issue-details.html">History</a>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <strong>UPS-04</strong>
+                                </td>
+
+                                <td>
+                                    <span class="issue-title">Server room power backup</span>
+                                    <span class="issue-sub">5 incidents · Avg 6.3h</span>
+                                </td>
+
+                                <td data-category="Power">Power</td>
+                                <td>Block B · Basement</td>
+
+                                <td>
+                                    <span class="condition status-progress">Under maintenance</span>
+                                </td>
+
+                                <td>
+                                    <div class="asset-health">
+                                        <div class="health-ring">78%</div>
+                                    </div>
+                                </td>
+
+                                <td>29 June 2026</td>
+
+                                <td>
+                                    <span class="status status-resolved">Active</span>
+                                </td>
+
+                                <td>
+                                    <a class="btn btn-ghost" href="issue-details.html">History</a>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <strong>PRN-14</strong>
+                                </td>
+
+                                <td>
+                                    <span class="issue-title">Finance printer</span>
+                                    <span class="issue-sub">8 incidents · Avg 2.1h</span>
+                                </td>
+
+                                <td data-category="Printing">Printing</td>
+                                <td>Block B · Floor 2</td>
+
+                                <td>
+                                    <span class="condition status-risk">Needs attention</span>
+                                </td>
+
+                                <td>
+                                    <div class="asset-health">
+                                        <div class="health-ring">68%</div>
+                                    </div>
+                                </td>
+
+                                <td>09 July 2026</td>
+
+                                <td>
+                                    <span class="status status-risk">Expired</span>
+                                </td>
+
+                                <td>
+                                    <a class="btn btn-ghost" href="issue-details.html">History</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script defer src="js/app.js"></script>
+</body>
+</html>

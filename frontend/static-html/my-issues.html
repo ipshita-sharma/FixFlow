@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My issues — FixFlow</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/tables.css">
+  </head>
+
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" id="sidebar">
+        <a class="brand" href="index.html">
+          <span class="brand-mark">↗</span>FixFlow
+        </a>
+
+        <nav aria-label="Workspace">
+          <span class="sidebar-label">Workspace</span>
+
+          <a href="dashboard.html">
+            <span class="nav-icon">▦</span>Dashboard
+          </a>
+
+          <a class="active" href="my-issues.html">
+            <span class="nav-icon">◌</span>My Issues
+          </a>
+
+          <a href="report-issue.html">
+            <span class="nav-icon">＋</span>Report Issue
+          </a>
+
+          <a href="assets.html">
+            <span class="nav-icon">◈</span>Assets
+          </a>
+
+          <a href="profile.html">
+            <span class="nav-icon">⌁</span>Notifications
+          </a>
+
+          <span class="sidebar-label">Account</span>
+
+          <a href="profile.html">
+            <span class="nav-icon">◎</span>Profile
+          </a>
+
+          <a href="index.html">
+            <span class="nav-icon">↪</span>Logout
+          </a>
+        </nav>
+
+        <div class="sidebar-bottom">
+          <div class="sidebar-user">
+            <span class="avatar">AJ</span>
+            <div>
+              <strong>Alex Johnson</strong>
+              <span>Member · Vertex</span>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <div class="main-area">
+        <header class="topbar">
+          <button class="icon-btn" data-menu-toggle aria-label="Open navigation">☰</button>
+
+          <span class="topbar-title">My issues</span>
+
+          <label class="topbar-search">
+            ⌕
+            <input type="search" placeholder="Search issues, assets...">
+          </label>
+
+          <div class="topbar-actions">
+            <button class="icon-btn" aria-label="Notifications">
+              ♢
+              <i class="notification-dot"></i>
+            </button>
+
+            <div class="top-user">
+              <span class="avatar">AJ</span>
+              <div>
+                <strong>Alex Johnson</strong>
+                <span>Operations member</span>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <main class="page">
+          <div class="page-header">
+            <div>
+              <span class="eyebrow">Your maintenance history</span>
+              <h1>My issues</h1>
+              <p>Track every report, from first note to verified resolution.</p>
+            </div>
+
+            <a class="btn btn-primary" href="report-issue.html">＋ Report issue</a>
+          </div>
+
+          <div class="filter-bar">
+            <input
+              type="search"
+              placeholder="Search by issue ID or title"
+              data-table-search
+            >
+
+            <select data-table-filter="status">
+              <option value="">All statuses</option>
+              <option>Open</option>
+              <option>Assigned</option>
+              <option>In progress</option>
+              <option>Resolved</option>
+            </select>
+
+            <select data-table-filter="priority">
+              <option value="">All priorities</option>
+              <option>Critical</option>
+              <option>High</option>
+              <option>Medium</option>
+              <option>Low</option>
+            </select>
+
+            <select data-table-filter="category">
+              <option value="">All categories</option>
+              <option>HVAC</option>
+              <option>IT / Network</option>
+              <option>Plumbing</option>
+              <option>Security</option>
+            </select>
+
+            <input type="date" aria-label="Filter by date">
+          </div>
+
+          <div class="table-card">
+            <table class="issue-table" data-filter-table>
+              <thead>
+                <tr>
+                  <th>Issue ID</th>
+                  <th>Issue</th>
+                  <th>Category</th>
+                  <th>Location</th>
+                  <th>Priority</th>
+                  <th>Status</th>
+                  <th>Technician</th>
+                  <th>Reported</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td><strong>FF-1042</strong></td>
+
+                  <td>
+                    <a href="issue-details.html">
+                      <span class="issue-title">AC not cooling</span>
+                      <span class="issue-sub">Conference Room 302</span>
+                    </a>
+                  </td>
+
+                  <td data-category="HVAC">HVAC</td>
+
+                  <td>Block A · Floor 3</td>
+
+                  <td data-priority="High">
+                    <span class="priority priority-high">High</span>
+                  </td>
+
+                  <td data-status="In progress">
+                    <span class="status status-progress">In progress</span>
+                  </td>
+
+                  <td>Arjun Mehta</td>
+
+                  <td>17 Aug 2026</td>
+
+                  <td>
+                    <a class="btn btn-ghost" href="issue-details.html">View</a>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td><strong>FF-1051</strong></td>
+
+                  <td>
+                    <span class="issue-title">Printer offline</span>
+                    <span class="issue-sub">Finance Bay</span>
+                  </td>
+
+                  <td data-category="IT / Network">IT / Network</td>
+
+                  <td>Block B · Floor 2</td>
+
+                  <td data-priority="Medium">
+                    <span class="priority priority-medium">Medium</span>
+                  </td>
+
+                  <td data-status="Assigned">
+                    <span class="status status-open">Assigned</span>
+                  </td>
+
+                  <td>Rahul Verma</td>
+
+                  <td>16 Aug 2026</td>
+
+                  <td>
+                    <a class="btn btn-ghost" href="issue-details.html">View</a>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td><strong>FF-1057</strong></td>
+
+                  <td>
+                    <span class="issue-title">Water pressure low</span>
+                    <span class="issue-sub">Pantry, Floor 2</span>
+                  </td>
+
+                  <td data-category="Plumbing">Plumbing</td>
+
+                  <td>Block A · Floor 2</td>
+
+                  <td data-priority="Low">
+                    <span class="priority priority-low">Low</span>
+                  </td>
+
+                  <td data-status="Open">
+                    <span class="status status-open">Open</span>
+                  </td>
+
+                  <td class="muted">Unassigned</td>
+
+                  <td>15 Aug 2026</td>
+
+                  <td>
+                    <a class="btn btn-ghost" href="issue-details.html">View</a>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td><strong>FF-1061</strong></td>
+
+                  <td>
+                    <span class="issue-title">Access card reader</span>
+                    <span class="issue-sub">North Entrance</span>
+                  </td>
+
+                  <td data-category="Security">Security</td>
+
+                  <td>Block A · Ground</td>
+
+                  <td data-priority="Critical">
+                    <span class="priority priority-critical">Critical</span>
+                  </td>
+
+                  <td data-status="At risk">
+                    <span class="status status-risk">At risk</span>
+                  </td>
+
+                  <td>Priya Sharma</td>
+
+                  <td>15 Aug 2026</td>
+
+                  <td>
+                    <a class="btn btn-ghost" href="issue-details.html">View</a>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td><strong>FF-1037</strong></td>
+
+                  <td>
+                    <span class="issue-title">Meeting room lights</span>
+                    <span class="issue-sub">Boardroom 201</span>
+                  </td>
+
+                  <td data-category="Electrical">Electrical</td>
+
+                  <td>Block B · Floor 2</td>
+
+                  <td data-priority="Medium">
+                    <span class="priority priority-medium">Medium</span>
+                  </td>
+
+                  <td data-status="Resolved">
+                    <span class="status status-resolved">Resolved</span>
+                  </td>
+
+                  <td>Arjun Mehta</td>
+
+                  <td>11 Aug 2026</td>
+
+                  <td>
+                    <a class="btn btn-ghost" href="issue-details.html">View</a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <script defer src="js/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Technician workspace — FixFlow</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" id="sidebar">
+        <a class="brand" href="index.html">
+          <span class="brand-mark">↗</span>FixFlow
+        </a>
+
+        <nav aria-label="Technician workspace">
+          <span class="sidebar-label">My workspace</span>
+
+          <a class="active" href="technician.html">
+            <span class="nav-icon">▦</span>Assigned jobs
+          </a>
+
+          <a href="issues.html">
+            <span class="nav-icon">◌</span>All issues
+          </a>
+
+          <a href="assets.html">
+            <span class="nav-icon">◈</span>Assigned assets
+          </a>
+
+          <a href="profile.html">
+            <span class="nav-icon">⌁</span>Notifications
+          </a>
+
+          <span class="sidebar-label">Account</span>
+
+          <a href="profile.html">
+            <span class="nav-icon">◎</span>Profile
+          </a>
+
+          <a href="index.html">
+            <span class="nav-icon">↪</span>Logout
+          </a>
+        </nav>
+
+        <div class="sidebar-bottom">
+          <div class="sidebar-user">
+            <span class="avatar orange">AM</span>
+            <div>
+              <strong>Arjun Mehta</strong>
+              <span>HVAC Specialist</span>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <div class="main-area">
+        <header class="topbar">
+          <button class="icon-btn" data-menu-toggle aria-label="Open navigation">☰</button>
+
+          <span class="topbar-title">Assigned jobs</span>
+
+          <label class="topbar-search">
+            ⌕
+            <input type="search" placeholder="Search jobs, assets...">
+          </label>
+
+          <div class="topbar-actions">
+            <button class="icon-btn" aria-label="Notifications">
+              ♢
+              <i class="notification-dot"></i>
+            </button>
+
+            <div class="top-user">
+              <span class="avatar orange">AM</span>
+              <div>
+                <strong>Arjun Mehta</strong>
+                <span>Technician</span>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <main class="page">
+          <div class="page-header">
+            <div>
+              <span class="eyebrow">Technician workspace</span>
+              <h1>Your work queue.</h1>
+              <p>
+                Focus on the jobs that need your skills next, with the SLA context to make the right call.
+              </p>
+            </div>
+
+            <a class="btn btn-ghost" href="assets.html">View assigned assets</a>
+          </div>
+
+          <section class="kpi-grid">
+            <article class="kpi-card">
+              <span class="kpi-label">Assigned jobs</span>
+              <div class="kpi-number">07</div>
+              <span class="trend">3 due today</span>
+            </article>
+
+            <article class="kpi-card">
+              <span class="kpi-label">High priority</span>
+              <div class="kpi-number">02</div>
+              <span class="trend down">Requires focus</span>
+            </article>
+
+            <article class="kpi-card">
+              <span class="kpi-label">SLA risk</span>
+              <div class="kpi-number">01</div>
+              <span class="trend down">FF-1061 · 1h 18m</span>
+            </article>
+
+            <article class="kpi-card">
+              <span class="kpi-label">Completed this month</span>
+              <div class="kpi-number">31</div>
+              <span class="trend">↑ 9% vs July</span>
+            </article>
+          </section>
+
+          <div class="dashboard-grid wide-right">
+            <section>
+              <div class="panel-header">
+                <h2>Assigned jobs</h2>
+                <a href="issues.html">Open full queue ↗</a>
+              </div>
+
+              <div class="job-grid">
+                <article class="job-card">
+                  <div class="job-card-head">
+                    <span class="priority priority-high">High</span>
+                    <span class="small muted">FF-1042</span>
+                  </div>
+
+                  <h3>AC repair</h3>
+                  <p>Conference Room 302 · HVAC-302</p>
+
+                  <div class="job-meta">
+                    <span>
+                      SLA
+                      <strong>3h 42m remaining</strong>
+                    </span>
+
+                    <span>
+                      Status
+                      <strong>In progress</strong>
+                    </span>
+                  </div>
+
+                  <div class="job-actions">
+                    <button class="btn btn-teal" data-toast="Job marked as in progress">
+                      Start work
+                    </button>
+                    <a class="btn btn-ghost" href="issue-details.html">View</a>
+                  </div>
+                </article>
+
+                <article class="job-card">
+                  <div class="job-card-head">
+                    <span class="priority priority-critical">Critical</span>
+                    <span class="small muted">FF-1061</span>
+                  </div>
+
+                  <h3>Access card reader</h3>
+                  <p>North Entrance · Security system</p>
+
+                  <div class="job-meta">
+                    <span>
+                      SLA
+                      <strong>1h 18m remaining</strong>
+                    </span>
+
+                    <span>
+                      Status
+                      <strong>Assigned</strong>
+                    </span>
+                  </div>
+
+                  <div class="job-actions">
+                    <button class="btn btn-teal" data-toast="Job accepted">
+                      Accept
+                    </button>
+                    <a class="btn btn-ghost" href="issue-details.html">View</a>
+                  </div>
+                </article>
+
+                <article class="job-card">
+                  <div class="job-card-head">
+                    <span class="priority priority-medium">Medium</span>
+                    <span class="small muted">FF-1051</span>
+                  </div>
+
+                  <h3>Printer offline</h3>
+                  <p>Finance Bay · PRN-14</p>
+
+                  <div class="job-meta">
+                    <span>
+                      SLA
+                      <strong>Tomorrow · 11:00</strong>
+                    </span>
+
+                    <span>
+                      Status
+                      <strong>Assigned</strong>
+                    </span>
+                  </div>
+
+                  <div class="job-actions">
+                    <button class="btn btn-teal" data-toast="Job accepted">
+                      Accept
+                    </button>
+                    <a class="btn btn-ghost" href="issue-details.html">View</a>
+                  </div>
+                </article>
+
+                <article class="job-card">
+                  <div class="job-card-head">
+                    <span class="priority priority-low">Low</span>
+                    <span class="small muted">FF-1048</span>
+                  </div>
+
+                  <h3>Loose cabinet hinge</h3>
+                  <p>Breakout Area · Furniture</p>
+
+                  <div class="job-meta">
+                    <span>
+                      SLA
+                      <strong>2 days remaining</strong>
+                    </span>
+
+                    <span>
+                      Status
+                      <strong>Assigned</strong>
+                    </span>
+                  </div>
+
+                  <div class="job-actions">
+                    <button class="btn btn-teal" data-toast="Job accepted">
+                      Accept
+                    </button>
+                    <a class="btn btn-ghost" href="issue-details.html">View</a>
+                  </div>
+                </article>
+              </div>
+            </section>
+
+            <aside class="side-stack">
+              <section class="panel">
+                <div class="panel-header">
+                  <h2>My workload</h2>
+                  <a href="profile.html">Availability ↗</a>
+                </div>
+
+                <div class="metric">
+                  <div class="metric-head">
+                    <span>Current capacity</span>
+                    <span>72%</span>
+                  </div>
+
+                  <div class="progress-line">
+                    <i class="orange" data-width="72"></i>
+                  </div>
+                </div>
+
+                <div class="info-list">
+                  <div>
+                    <span>Open assignments</span>
+                    <strong>7 of 10</strong>
+                  </div>
+
+                  <div>
+                    <span>Average resolution</span>
+                    <strong>4.2 hours</strong>
+                  </div>
+
+                  <div>
+                    <span>On-time rate</span>
+                    <strong>96%</strong>
+                  </div>
+                </div>
+              </section>
+
+              <section class="panel">
+                <div class="panel-header">
+                  <h2>Skills</h2>
+                </div>
+
+                <div class="detail-meta">
+                  <span class="status status-resolved">HVAC</span>
+                  <span class="status status-resolved">Electrical</span>
+                  <span class="status status-neutral">Safety certified</span>
+                </div>
+              </section>
+            </aside>
+          </div>
+
+          <section class="panel" data-spaced="true">
+            <div class="panel-header">
+              <h2>Recent completed jobs</h2>
+              <a href="issues.html">View history ↗</a>
+            </div>
+
+            <div class="table-card" data-compact="true">
+              <table class="issue-table">
+                <thead>
+                  <tr>
+                    <th>Issue</th>
+                    <th>Asset</th>
+                    <th>Resolved</th>
+                    <th>Resolution time</th>
+                    <th>Rating</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr>
+                    <td>
+                      <span class="issue-title">Meeting room lights</span>
+                      <span class="issue-sub">FF-1037 · Electrical</span>
+                    </td>
+                    <td>SRV-02</td>
+                    <td>11 Aug 2026</td>
+                    <td>2.4 hours</td>
+                    <td>
+                      <span class="status status-resolved">5.0 / 5</span>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <span class="issue-title">Cold water dispenser</span>
+                      <span class="issue-sub">FF-1028 · Plumbing</span>
+                    </td>
+                    <td>DIS-08</td>
+                    <td>08 Aug 2026</td>
+                    <td>3.1 hours</td>
+                    <td>
+                      <span class="status status-resolved">4.8 / 5</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <script defer src="js/app.js"></script>
+  </body>
+</html>

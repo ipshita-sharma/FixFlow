@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Create account — FixFlow</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/auth.css">
+  </head>
+
+  <body>
+    <main class="auth-page">
+      <aside class="auth-aside">
+        <a class="brand" href="index.html">
+          <span class="brand-mark">↗</span>FixFlow
+        </a>
+
+        <div>
+          <span class="eyebrow">A better maintenance rhythm</span>
+          <h1>Give every issue a clear next step.</h1>
+          <p>
+            Join the teams making facility operations more visible, measurable,
+            and human.
+          </p>
+        </div>
+
+        <div class="auth-quote">
+          Report → Prioritize → Assign → Repair → Verify → Resolve
+          <strong>The FixFlow operating loop</strong>
+        </div>
+      </aside>
+
+      <section class="auth-content">
+        <div class="auth-form-wrap">
+          <span class="eyebrow">Get started</span>
+
+          <h2>Create your account</h2>
+
+          <p>Set up your workspace in under two minutes.</p>
+
+          <form class="auth-form" action="dashboard.html" method="get">
+            <div class="form-row">
+              <div class="field">
+                <label for="full-name">Full name</label>
+                <input
+                  id="full-name"
+                  name="fullName"
+                  type="text"
+                  placeholder="Alex Johnson"
+                  required
+                >
+              </div>
+
+              <div class="field">
+                <label for="phone">Phone</label>
+                <input
+                  id="phone"
+                  name="phone"
+                  type="tel"
+                  placeholder="+91 98765 43210"
+                  required
+                >
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="register-email">Work email</label>
+              <input
+                id="register-email"
+                name="email"
+                type="email"
+                placeholder="alex@vertexbusiness.com"
+                required
+              >
+            </div>
+
+            <div class="field">
+              <label for="organization">Organization</label>
+              <input
+                id="organization"
+                name="organization"
+                type="text"
+                placeholder="Vertex Business Center"
+                required
+              >
+            </div>
+
+            <div class="field">
+              <label for="role">Your role</label>
+              <select id="role" name="role" required>
+                <option value="">Select a role</option>
+                <option>User</option>
+                <option>Technician</option>
+                <option>Administrator</option>
+              </select>
+            </div>
+
+            <div class="form-row">
+              <div class="field">
+                <label for="register-password">Password</label>
+                <input
+                  id="register-password"
+                  name="password"
+                  type="password"
+                  placeholder="8+ characters"
+                  minlength="8"
+                  required
+                >
+              </div>
+
+              <div class="field">
+                <label for="confirm-password">Confirm password</label>
+                <input
+                  id="confirm-password"
+                  name="confirmPassword"
+                  type="password"
+                  placeholder="Repeat password"
+                  minlength="8"
+                  required
+                >
+              </div>
+            </div>
+
+            <label class="terms">
+              <input type="checkbox" required>
+              I agree to the FixFlow terms and understand how my maintenance
+              data is used.
+            </label>
+
+            <div class="form-footer">
+              <button class="btn btn-primary" type="submit">
+                Create account <span aria-hidden="true">↗</span>
+              </button>
+            </div>
+          </form>
+
+          <div class="auth-switch">
+            Already have an account? <a href="login.html">Log in</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script defer src="js/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FF-1042 — FixFlow</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">↗</span>FixFlow
+      </a>
+
+      <nav aria-label="Workspace">
+        <span class="sidebar-label">Workspace</span>
+
+        <a href="dashboard.html">
+          <span class="nav-icon">▦</span>Dashboard
+        </a>
+
+        <a href="my-issues.html">
+          <span class="nav-icon">◌</span>My Issues
+        </a>
+
+        <a href="report-issue.html">
+          <span class="nav-icon">＋</span>Report Issue
+        </a>
+
+        <a href="assets.html">
+          <span class="nav-icon">◈</span>Assets
+        </a>
+
+        <a href="profile.html">
+          <span class="nav-icon">⌁</span>Notifications
+        </a>
+
+        <span class="sidebar-label">Account</span>
+
+        <a href="profile.html">
+          <span class="nav-icon">◎</span>Profile
+        </a>
+
+        <a href="index.html">
+          <span class="nav-icon">↪</span>Logout
+        </a>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <div class="sidebar-user">
+          <span class="avatar">AJ</span>
+          <div>
+            <strong>Alex Johnson</strong>
+            <span>Member · Vertex</span>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <div class="main-area">
+      <header class="topbar">
+        <button class="icon-btn" data-menu-toggle aria-label="Open navigation">☰</button>
+        <span class="topbar-title">Issue details</span>
+
+        <label class="topbar-search">
+          ⌕
+          <input type="search" placeholder="Search issues, assets...">
+        </label>
+
+        <div class="topbar-actions">
+          <button class="icon-btn" aria-label="Notifications">
+            ♢
+            <i class="notification-dot"></i>
+          </button>
+
+          <div class="top-user">
+            <span class="avatar">AJ</span>
+            <div>
+              <strong>Alex Johnson</strong>
+              <span>Operations member</span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="page">
+        <div class="page-header">
+          <div>
+            <a class="muted small" href="my-issues.html">← Back to my issues</a>
+            <h1>FF-1042</h1>
+            <p>Reported 17 August 2026 by Alex Johnson</p>
+          </div>
+
+          <div class="hero-buttons">
+            <a class="btn btn-ghost" href="my-issues.html">Edit issue</a>
+            <button class="btn btn-primary" data-modal-open="update-modal">
+              Add update
+            </button>
+          </div>
+        </div>
+
+        <div class="detail-grid">
+          <section class="detail-hero">
+            <div class="detail-meta">
+              <span class="priority priority-high">High priority</span>
+              <span class="status status-progress">In progress</span>
+            </div>
+
+            <h1>AC not cooling in Conference Room 302</h1>
+
+            <p class="muted small">
+              The room temperature has risen above 26°C since this morning.
+              The meeting scheduled at 3 PM may be affected.
+            </p>
+
+            <div class="detail-stat-grid">
+              <div class="detail-stat">
+                <span>Category</span>
+                <strong>HVAC</strong>
+              </div>
+
+              <div class="detail-stat">
+                <span>Location</span>
+                <strong>Block A · Floor 3</strong>
+              </div>
+
+              <div class="detail-stat">
+                <span>Asset</span>
+                <strong>HVAC-302</strong>
+              </div>
+
+              <div class="detail-stat">
+                <span>Reporter</span>
+                <strong>Alex Johnson</strong>
+              </div>
+            </div>
+
+            <div class="detail-section">
+              <h2>Assigned technician</h2>
+
+              <div class="tech-card">
+                <span class="avatar orange">AM</span>
+
+                <div>
+                  <strong>Arjun Mehta</strong>
+                  <span>HVAC Specialist · 4 active jobs</span>
+                </div>
+
+                <a class="btn btn-ghost" href="profile.html">Message</a>
+              </div>
+            </div>
+
+            <div class="detail-section">
+              <h2>Issue timeline</h2>
+
+              <div class="timeline">
+                <div class="timeline-item">
+                  <strong>Reported</strong>
+                  <p>Issue submitted with room and asset context.</p>
+                  <time>17 Aug · 09:18</time>
+                </div>
+
+                <div class="timeline-item">
+                  <strong>Triaged</strong>
+                  <p>Priority set to High with a 6-hour SLA.</p>
+                  <time>17 Aug · 09:24</time>
+                </div>
+
+                <div class="timeline-item">
+                  <strong>Technician assigned</strong>
+                  <p>Arjun Mehta recommended by skill and location.</p>
+                  <time>17 Aug · 09:31</time>
+                </div>
+
+                <div class="timeline-item">
+                  <strong>Accepted</strong>
+                  <p>Arjun accepted the repair job.</p>
+                  <time>17 Aug · 09:40</time>
+                </div>
+
+                <div class="timeline-item">
+                  <strong>In progress</strong>
+                  <p>Technician is checking the condenser unit.</p>
+                  <time>17 Aug · 10:05</time>
+                </div>
+
+                <div class="timeline-item pending">
+                  <strong>Resolved</strong>
+                  <p>Waiting for repair completion and verification.</p>
+                </div>
+
+                <div class="timeline-item pending">
+                  <strong>Verified</strong>
+                  <p>Reporter confirms that the space is usable.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="detail-section">
+              <h2>Technician notes</h2>
+              <p>
+                “The filter is clean. I’m testing the thermostat and condenser
+                fan now; a replacement capacitor may be required.”
+              </p>
+            </div>
+          </section>
+
+          <aside class="side-stack">
+            <section class="sla-card">
+              <span>SLA deadline · Today, 15:18</span>
+              <strong>3h 42m</strong>
+              <p class="small sla-copy">
+                remaining before the issue is at risk
+              </p>
+
+              <div class="progress-line">
+                <i class="sla-progress"></i>
+              </div>
+            </section>
+
+            <section class="panel">
+              <div class="panel-header">
+                <h2>Issue information</h2>
+              </div>
+
+              <div class="info-list">
+                <div>
+                  <span>Impact</span>
+                  <strong>One meeting room</strong>
+                </div>
+
+                <div>
+                  <span>People affected</span>
+                  <strong>12</strong>
+                </div>
+
+                <div>
+                  <span>Asset criticality</span>
+                  <strong>High</strong>
+                </div>
+
+                <div>
+                  <span>Preferred contact</span>
+                  <strong>Email</strong>
+                </div>
+
+                <div>
+                  <span>Attachments</span>
+                  <strong>1 image</strong>
+                </div>
+              </div>
+            </section>
+
+            <section class="panel">
+              <div class="panel-header">
+                <h2>Related asset</h2>
+                <a href="assets.html">View ↗</a>
+              </div>
+
+              <div class="asset-health">
+                <div class="health-ring">68%</div>
+
+                <div>
+                  <strong>HVAC-302</strong>
+                  <span>Conference Room HVAC · Needs attention</span>
+                </div>
+              </div>
+            </section>
+          </aside>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <div
+    class="modal"
+    id="update-modal"
+    aria-hidden="true"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="update-title"
+  >
+    <div class="modal-card">
+      <button class="modal-close" data-modal-close aria-label="Close">×</button>
+
+      <span class="eyebrow">Keep the timeline current</span>
+
+      <h2 id="update-title">Add an issue update</h2>
+
+      <form action="issue-details.html" method="get">
+        <div class="field">
+          <label for="update">Update</label>
+          <textarea
+            id="update"
+            name="update"
+            placeholder="Share a progress note..."
+            required
+          ></textarea>
+        </div>
+
+        <button class="btn btn-primary" type="submit">Post update</button>
+      </form>
+    </div>
+  </div>
+
+  <script defer src="js/app.js"></script>
+</body>
+</html>
