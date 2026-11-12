@@ -1,0 +1,21 @@
+# Java / Maven
+target/
+*.class
+
+# Frontend
+node_modules/
+dist/
+.vite/
+.env
+.env.*
+!.env.example
+
+# IDE / OS
+.idea/
+.vscode/
+*.iml
+.DS_Store
+
+# Local secrets
+application.properties
+application-local.properties

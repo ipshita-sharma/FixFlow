@@ -1,0 +1,23 @@
+spring.application.name=fixflow-api
+server.port=8080
+
+spring.datasource.url=jdbc:mysql://localhost:3306/fixflow?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+spring.datasource.username=fixflow_user
+spring.datasource.password=change-me-locally
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+
+spring.jackson.default-property-inclusion=non_null
+spring.sql.init.mode=never
+logging.level.com.fixflow=INFO
+
+# Optional local-only administrator provisioning. Requires the dev profile and Spring properties.
+# Supply fixflow.dev-admin.* through SPRING_APPLICATION_JSON or --fixflow.dev-admin.* arguments.
+# Never enable this in a production profile or commit the password.
+# fixflow.dev-admin.enabled=true
+
+# Optional one-shot local technician password reset. Requires the dev profile and explicit opt-in.
+# Supply the passwords through local environment variables or uncomment these local-only properties.
+# Never commit real passwords or enable this in a production profile.
+# fixflow.dev-technician-password-reset.enabled=true
+# fixflow.dev-technician-password-reset.arjun-password=local-only-password
+# fixflow.dev-technician-password-reset.rahul-password=local-only-password
